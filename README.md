@@ -6,9 +6,9 @@ A Windows endpoint lab for collecting security events in Elastic, writing detect
 
 - [x] Start Elasticsearch and Kibana on Docker Desktop.
 - [x] Open Kibana from the Windows VM over the DE host-only network.
-- [ ] Start Fleet Server and enroll the Windows VM with Elastic Agent.
-- [ ] Confirm Windows Security events in Kibana Discover.
-- [ ] Validate a failed-logon rule and document the resulting alert.
+- [x] Start Fleet Server and enroll the Windows VM with Elastic Agent.
+- [x] Confirm Windows Security events in Kibana Discover.
+- [x] Validate a failed-logon rule and document the resulting alert.
 
 ## Lab architecture
 

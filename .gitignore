@@ -7,3 +7,5 @@ elasticdata/
 *.key
 *.p12
 *.pfx
+elastic-agent-8.4.3-windows-x86_64.zip
+elastic-agent-*.zip
