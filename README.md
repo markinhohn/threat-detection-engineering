@@ -85,6 +85,18 @@ A result of `TcpTestSucceeded : True` confirms the VM can reach Kibana's TCP por
 - **Failed Windows logons.** Use the book's threshold rule to verify that Windows Security events reach Elastic and generate an alert.
 - **Encoded PowerShell.** Use Sysmon process creation events to test a custom rule for `-EncodedCommand`. Compare a harmless encoded invocation with a normal PowerShell launch. Record the rule logic, test results, and likely false positives such as legitimate administrative scripts.
 
+### Filed Logon Windows Detection
+
+The rule matches windows event id 4626 which logs failed logon attempts, a threshold of 4 failed attempts.
+![Rule configuration in Elastic](setting_up_failed_logon_detection.png)
+
+### Validation
+
+I attempted to trigger the rule by entering the wrong logon credentials to meet the threshold on the monitored host, The rule produced an alert in Elastic.
+![Alert generated during failed logon test](validating_rule.png)
+
+
+
 ## Credits
 
 The base Compose setup follows Chapter 3 of *Practical Threat Detection Engineering* by Megan Roddie, Jason Deyalsingh, and Gary J. Katz. [Packt companion repository](https://github.com/PacktPublishing/Practical-Threat-Detection-Engineering) · [Upstream MIT license](https://github.com/PacktPublishing/Practical-Threat-Detection-Engineering/blob/main/LICENSE)
