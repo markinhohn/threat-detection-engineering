@@ -1,0 +1,9 @@
+generator.py
+.env
+.env.*
+!.env.example
+certs/
+elasticdata/
+*.key
+*.p12
+*.pfx
