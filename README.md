@@ -88,12 +88,12 @@ A result of `TcpTestSucceeded : True` confirms the VM can reach Kibana's TCP por
 ### Filed Logon Windows Detection
 
 The rule matches windows event id 4626 which logs failed logon attempts, a threshold of 4 failed attempts.
-![Rule configuration in Elastic](setting_up_failed_logon_detection.png)
+![Rule configuration in Elastic](detections/setting_up_failed_logon_detection.png)
 
 ### Validation
 
 I attempted to trigger the rule by entering the wrong logon credentials to meet the threshold on the monitored host, The rule produced an alert in Elastic.
-![Alert generated during failed logon test](validating_rule.png)
+![Alert generated during failed logon test](detections/validating_rule.png)
 
 
 
