@@ -85,7 +85,7 @@ A result of `TcpTestSucceeded : True` confirms the VM can reach Kibana's TCP por
 - **Failed Windows logons.** Use the book's threshold rule to verify that Windows Security events reach Elastic and generate an alert.
 - **Encoded PowerShell.** Use Sysmon process creation events to test a custom rule for `-EncodedCommand`. Compare a harmless encoded invocation with a normal PowerShell launch. Record the rule logic, test results, and likely false positives such as legitimate administrative scripts.
 
-### Filed Logon Windows Detection
+### Failed Logon Windows Detection
 
 The rule matches windows event id 4626 which logs failed logon attempts, a threshold of 4 failed attempts.
 ![Rule configuration in Elastic](detections/setting_up_failed_logon_detection.png)
